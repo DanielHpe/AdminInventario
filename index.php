@@ -14,8 +14,11 @@
 
 ?>
 <body>
-    <div class="container table-show">
-        <h1 style="margin-top:50px" class="text-center">Controle de Inventário</h1>
+    <div class="header">
+        <img style="width: 200px; height: 200px; margin-top: -70px; margin-bottom: -50px; margin-left: 120px; position: absolute;" src="view/img/logo_stefanini.png" alt="logo" />
+        <h1 style="margin-top:20px; margin-bottom:50px" class="text-center">Controle de Inventário</h1>
+    </div>
+    <div class="container">
         <table id="table-server" class="display nowrap" style="width:100%">
             <thead class="thead-dark">
                 <tr>
