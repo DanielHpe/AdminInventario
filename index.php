@@ -15,7 +15,7 @@
 ?>
 <body>
     <div class="container table-show">
-        <h2 style="margin-top:50px" class="text-center">Controle de Inventário</h1>
+        <h1 style="margin-top:50px" class="text-center">Controle de Inventário</h1>
         <table id="table-server" class="display nowrap" style="width:100%">
             <thead class="thead-dark">
                 <tr>
@@ -25,17 +25,31 @@
                     <th scope="col">Email: </th>
                     <th scope="col">Login: </th>
                     <th scope="col">Patrimonio: </th>
+                    <th scope="col">Usuário: </th>
+                    <th scope="col">Sistema: </th>
+                    <th scope="col">Modelo: </th>
+                    <th scope="col">CPU: </th>
+                    <th scope="col">Número de Série: </th>
+                    <th scope="col">Sistema Operacional </th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <?php while($row = $result->fetch(PDO::FETCH_ASSOC)){ ?>
-                    <tr>>
+                    <tr>
                         <td><?php echo $row['lastSended']; ?></td>
                         <td><?php echo $row['cpf']; ?></td>
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['emailCorporativo']; ?></td>
                         <td><?php echo $row['loginRede']; ?></td>
-                        <td><?php echo $row['patrimonio']; ?></td>            
+                        <td><?php echo $row['patrimonio']; ?></td>
+                        <td><?php echo $row['username']; ?></td>
+                        <td><?php echo $row['system']; ?></td>
+                        <td><?php echo $row['model']; ?></td>
+                        <td><?php echo $row['cpu']; ?></td>
+                        <td><?php echo $row['serialnumber']; ?></td>
+                        <td><?php echo $row['os']; ?></td>
+                                   
                     </tr>
                 <?php } ?>
             </tbody>     
