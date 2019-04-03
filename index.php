@@ -29,7 +29,7 @@
             </thead>
             <tbody>
                 <?php while($row = $result->fetch(PDO::FETCH_ASSOC)){ ?>
-                    <tr>>
+                    <tr>
                         <td><?php echo $row['lastSended']; ?></td>
                         <td><?php echo $row['cpf']; ?></td>
                         <td><?php echo $row['name']; ?></td>
