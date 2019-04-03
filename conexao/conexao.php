@@ -25,6 +25,13 @@ class Conexao{
 		$this->conn->exec($string_query);
     }
 
+    public function selectAll($string_query, $param){
+        $stmt = $this->conn->prepare($string_query); 
+        $stmt->bindParam(1, $param, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt;  
+    }
+
     public function select($string_query, $param){
         $stmt = $this->conn->prepare($string_query); 
         $stmt->bindParam(1, $param, PDO::PARAM_STR);
