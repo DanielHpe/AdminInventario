@@ -30,7 +30,7 @@
                     <th scope="col">Modelo: </th>
                     <th scope="col">CPU: </th>
                     <th scope="col">Número de Série: </th>
-                    <th scope="col">Sistema Operacional </th>
+                    <th scope="col">Sistema Operacional: </th>
                     
                 </tr>
             </thead>
