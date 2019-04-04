@@ -5,10 +5,8 @@
 
     $conexao = new Conexao();
 
-    $query = "SELECT MAX(data) AS lastSended, cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os, data 
-        FROM userpcinfo
-        GROUP BY cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os
-        ORDER BY data DESC";
+    $query = "SELECT * FROM userpcinfo a JOIN (SELECT cpf, MAX(data) data from userpcinfo a GROUP BY cpf) b
+    ON a.cpf = b.cpf and a.data = b.data";
 
     $result = $conexao->selectAll($query, 0);
 
@@ -49,7 +47,7 @@
                 <tbody>
                     <?php while($row = $result->fetch(PDO::FETCH_ASSOC)){ ?>
                         <tr>
-                            <td><?php echo $row['lastSended']; ?></td>
+                            <td><?php echo $row['data']; ?></td>
                             <td><?php echo $row['cpf']; ?></td>
                             <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['emailCorporativo']; ?></td>
