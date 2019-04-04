@@ -7,7 +7,7 @@
 
     $query = "SELECT MAX(data) AS lastSended, cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os, data 
         FROM userpcinfo
-        GROUP BY cpf
+        GROUP BY cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os
         ORDER BY data DESC";
 
     $result = $conexao->selectAll($query, 0);
