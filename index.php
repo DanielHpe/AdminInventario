@@ -7,7 +7,7 @@
 
     $query = "SELECT MAX(data) AS lastSended, cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os, data 
         FROM userpcinfo
-        GROUP BY cpf
+        GROUP BY cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os
         ORDER BY data DESC";
 
     $result = $conexao->selectAll($query, 0);
@@ -22,44 +22,50 @@
     </div>
     <div class="container">
         <div class="jumbotron">
-        <table id="table-server" class="display nowrap" style="width:100%">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Enviado às: </th>
-                    <th scope="col">CPF: </th>
-                    <th scope="col">Nome: </th>
-                    <th scope="col">Email: </th>
-                    <th scope="col">Login: </th>
-                    <th scope="col">Patrimonio: </th>
-                    <th scope="col">Usuário: </th>
-                    <th scope="col">Sistema: </th>
-                    <th scope="col">Modelo: </th>
-                    <th scope="col">CPU: </th>
-                    <th scope="col">Número de Série: </th>
-                    <th scope="col">Sistema Operacional: </th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <?php while($row = $result->fetch(PDO::FETCH_ASSOC)){ ?>
+            <table id="table-server" class="display nowrap" style="width:100%">
+                <div class="container">
+                    <p id="date_filter">
+                        <span id="date-label-from" class="date-label">From:<input class="date_range_filter date" type="date" id="dateFrom" />
+                        <span id="date-label-to" class="date-label">To:<input class="date_range_filter date" type="date" id="dateTo" />
+                    </p>
+                </div>
+                <thead class="thead-dark">
                     <tr>
-                        <td><?php echo $row['lastSended']; ?></td>
-                        <td><?php echo $row['cpf']; ?></td>
-                        <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['emailCorporativo']; ?></td>
-                        <td><?php echo $row['loginRede']; ?></td>
-                        <td><?php echo $row['patrimonio']; ?></td>
-                        <td><?php echo $row['username']; ?></td>
-                        <td><?php echo $row['system']; ?></td>
-                        <td><?php echo $row['model']; ?></td>
-                        <td><?php echo $row['cpu']; ?></td>
-                        <td><?php echo $row['serialnumber']; ?></td>
-                        <td><?php echo $row['os']; ?></td>                  
+                        <th scope="col">Enviado às: </th>
+                        <th scope="col">CPF: </th>
+                        <th scope="col">Nome: </th>
+                        <th scope="col">Email: </th>
+                        <th scope="col">Login: </th>
+                        <th scope="col">Patrimonio: </th>
+                        <th scope="col">Usuário: </th>
+                        <th scope="col">Sistema: </th>
+                        <th scope="col">Modelo: </th>
+                        <th scope="col">CPU: </th>
+                        <th scope="col">Número de Série: </th>
+                        <th scope="col">Sistema Operacional: </th>
+                        
                     </tr>
-                <?php } ?>
-            </tbody>     
-        </table>
-            <a href="exportcsv\exportarcsv.php?export=true" class="btn btn-success pull-right">Export</a>
+                </thead>
+                <tbody>
+                    <?php while($row = $result->fetch(PDO::FETCH_ASSOC)){ ?>
+                        <tr>
+                            <td><?php echo $row['lastSended']; ?></td>
+                            <td><?php echo $row['cpf']; ?></td>
+                            <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['emailCorporativo']; ?></td>
+                            <td><?php echo $row['loginRede']; ?></td>
+                            <td><?php echo $row['patrimonio']; ?></td>
+                            <td><?php echo $row['username']; ?></td>
+                            <td><?php echo $row['system']; ?></td>
+                            <td><?php echo $row['model']; ?></td>
+                            <td><?php echo $row['cpu']; ?></td>
+                            <td><?php echo $row['serialnumber']; ?></td>
+                            <td><?php echo $row['os']; ?></td>                  
+                        </tr>
+                    <?php } ?>
+                </tbody>     
+            </table>
+            <a href="exportcsv\exportarcsv.php?export=true" class="btn btn-success pull-right">Exportar como CSV</a>
         </div>
        
     </div>

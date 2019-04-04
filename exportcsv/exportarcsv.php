@@ -10,7 +10,7 @@
 
         public function exportData(){
             $delimiter = ",";
-            $filename = "dados" . date('Ymd') . ".csv"; // Create file name
+            $filename = "dados" . date('Ymd') . ".csv"; 
              
             $f = fopen('php://memory', 'w'); 
              
@@ -38,9 +38,9 @@
 
     $conexao = new Conexao();
     $query = "SELECT MAX(data) AS lastSended, id, cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os, data 
-        FROM userpcinfo
-        GROUP BY cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os
-        ORDER BY data DESC";
+    FROM userpcinfo
+    GROUP BY cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os
+    ORDER BY data DESC";
 
     if(isset($_GET['export'])){
         $result = $conexao->selectAll($query, 0);

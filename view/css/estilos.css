@@ -13,6 +13,9 @@
 	src: url("../../lib/fonts/Cambria.ttf");
 	font-size: 1em;
 }
+#table-server{
+    font-family: 'Cambria';
+}
 #table-server_filter input {
     border-radius: 10px;
     outline: none;
@@ -23,9 +26,6 @@
     font-family: 'Cambria';
 }
 #table-server_length label{
-    font-family: 'Cambria';
-}
-#table-server_info{
     font-family: 'Cambria';
 }
 #table-server_paginate{
@@ -39,4 +39,19 @@ div.slider {
 }
 table.dataTable tbody td.no-padding {
     padding: 0;
+}
+#date_filter{
+    text-align: center;
+    font-family: 'Cambria';
+    color: #000000;
+    font-weight: bold
+}
+#date_filter span{
+    padding: 30px;
+}
+#date_filter input{
+    margin-left: 10px;
+    outline: none;
+    box-shadow: 2px 1px 2px 1px #000000;
+    margin-top: -10px;
 }
