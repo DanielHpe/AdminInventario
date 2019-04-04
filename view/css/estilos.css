@@ -13,3 +13,30 @@
 	src: url("../../lib/fonts/Cambria.ttf");
 	font-size: 1em;
 }
+#table-server_filter input {
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 2px 1px 2px 1px #000000;
+    margin-top: -10px;
+}
+#table-server_filter label {
+    font-family: 'Cambria';
+}
+#table-server_length label{
+    font-family: 'Cambria';
+}
+#table-server_info{
+    font-family: 'Cambria';
+}
+#table-server_paginate{
+    font-family: 'Cambria';
+}
+#table-server_filter input:focus {
+    box-shadow: 0 0 3pt 3pt blue;
+}
+div.slider {
+    display: none;
+}
+table.dataTable tbody td.no-padding {
+    padding: 0;
+}
