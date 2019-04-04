@@ -54,13 +54,12 @@
                         <td><?php echo $row['model']; ?></td>
                         <td><?php echo $row['cpu']; ?></td>
                         <td><?php echo $row['serialnumber']; ?></td>
-                        <td><?php echo $row['os']; ?></td>
-                                   
+                        <td><?php echo $row['os']; ?></td>                  
                     </tr>
                 <?php } ?>
             </tbody>     
         </table>
-            <a href="fragments\exportarcsv.php?export=true" class="btn btn-success pull-right">Export</a>
+            <a href="exportcsv\exportarcsv.php?export=true" class="btn btn-success pull-right">Export</a>
         </div>
        
     </div>
