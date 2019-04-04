@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../../lib/fonts/OpenSans-Light.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url("../../lib/fonts/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'Cambria';
+	src: url("../../lib/fonts/Cambria.ttf");
+	font-size: 1em;
+}

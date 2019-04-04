@@ -14,11 +14,14 @@
 
 ?>
 <body>
-    <div class="header">
-        <img style="width: 200px; height: 200px; margin-top: -70px; margin-bottom: -50px; margin-left: 120px; position: absolute;" src="view/img/logo_stefanini.png" alt="logo" />
-        <h1 style="margin-top:20px; margin-bottom:50px" class="text-center">Controle de Inventário</h1>
+    <div class="container">
+        <div class="header" style="font-family: Cambria">
+            <img style="width: 200px; height: 200px; margin-bottom:-50px; margin-top:-50px;" src="view/img/logo_stefanini.png" alt="logo" />
+            <!-- <h2  class="text-center">Controle de Inventário</h2> -->
+        </div>
     </div>
     <div class="container">
+        <div class="jumbotron">
         <table id="table-server" class="display nowrap" style="width:100%">
             <thead class="thead-dark">
                 <tr>
@@ -57,6 +60,7 @@
                 <?php } ?>
             </tbody>     
         </table>
+        </div>
     </div>
     <div style="margin-bottom: 30px;" class="margin"></div>
 <?php require_once('fragments\footer.php'); ?>
