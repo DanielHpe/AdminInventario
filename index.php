@@ -60,7 +60,9 @@
                 <?php } ?>
             </tbody>     
         </table>
+            <a href="fragments\exportarcsv.php?export=true" class="btn btn-success pull-right">Export</a>
         </div>
+       
     </div>
     <div style="margin-bottom: 30px;" class="margin"></div>
 <?php require_once('fragments\footer.php'); ?>
