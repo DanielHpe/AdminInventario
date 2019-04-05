@@ -14,13 +14,13 @@
              
             $f = fopen('php://memory', 'w'); 
              
-            $fields = array('ID', 'CPF', 'Nome', 'Email', 'Login','Nome de usuario', 'Sistema', 
+            $fields = array('ID', 'CPF', 'Nome', 'Email', 'Login', 'Patrimônio','Nome de usuario', 'Sistema', 
             'ModeloPc', 'CPU','SerialNumber', 'SistemaOperacional', 'Data');
             fputcsv($f, $fields, $delimiter);
              
             while($row = $this->result->fetch(PDO::FETCH_ASSOC)){     
-                $lineData = array($row['id'], $row['cpf'], $row['name'], $row['emailCorporativo'], $row['loginRede'],$row['username'],
-                $row['system'], $row['model'], $row['cpu'], $row['serialnumber'], $row['os'], $row['data']);
+                $lineData = array($row['id'], $row['cpf'], $row['name'], $row['emailCorporativo'], $row['loginRede'],
+                $row['patrimonio'], $row['username'], $row['system'], $row['model'], $row['cpu'], $row['serialnumber'], $row['os'], $row['data']);
                 fputcsv($f, $lineData, $delimiter);
             }
              
@@ -37,10 +37,9 @@
     require_once('..\conexao\conexao.php');
 
     $conexao = new Conexao();
-    $query = "SELECT MAX(data) AS lastSended, id, cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os, data 
-    FROM userpcinfo
-    GROUP BY cpf, name, emailCorporativo, patrimonio, loginRede, username, system, model, cpu, serialnumber, os
-    ORDER BY data DESC";
+
+    $query = "SELECT * FROM userpcinfo a JOIN (SELECT cpf, MAX(data) data from userpcinfo a GROUP BY cpf) b
+    ON a.cpf = b.cpf and a.data = b.data ORDER BY a.data DESC";
 
     if(isset($_GET['export'])){
         $result = $conexao->selectAll($query, 0);
