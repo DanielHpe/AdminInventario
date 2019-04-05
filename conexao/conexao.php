@@ -3,7 +3,7 @@
 class Conexao{
 
     public $conn;
-    public $hostname = 'localhost';
+    public $hostname = '127.0.0.1';
     public $database = 'systeminfotest';
     public $charset = "utf8";
     public $user = "root";

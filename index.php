@@ -15,8 +15,8 @@
 ?>
 <body>
     <div class="header">
-        <img style="width: 200px; height: 200px; margin-top: -70px; margin-bottom: -50px; margin-left: 120px; position: absolute;" src="view/img/logo_stefanini.png" alt="logo" />
-        <h1 style="margin-top:20px; margin-bottom:50px" class="text-center">Controle de Inventário</h1>
+        <img style="width: 200px; height: 200px; margin-top: -70px; margin-bottom: -50px; margin-left: 150px; position: absolute;" src="view/img/logo_stefanini.png" alt="logo" />
+        <h2 style="margin-top:20px; margin-bottom:50px" class="text-center">Controle de Inventário</h2>
     </div>
     <div class="container">
         <table id="table-server" class="display nowrap" style="width:100%">
