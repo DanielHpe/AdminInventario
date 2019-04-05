@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../../lib/fonts/OpenSans-Light.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url("../../lib/fonts/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'Cambria';
+	src: url("../../lib/fonts/Cambria.ttf");
+	font-size: 1em;
+}
+#table-server{
+    font-family: 'Cambria';
+}
+#table-server_filter input {
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 2px 1px 2px 1px #000000;
+    margin-top: -10px;
+}
+#table-server_filter label {
+    font-family: 'Cambria';
+}
+#table-server_length label{
+    font-family: 'Cambria';
+}
+#table-server_paginate{
+    font-family: 'Cambria';
+}
+#table-server_filter input:focus {
+    box-shadow: 0 0 3pt 3pt blue;
+}
+div.slider {
+    display: none;
+}
+table.dataTable tbody td.no-padding {
+    padding: 0;
+}
+#date_filter{
+    text-align: center;
+    font-family: 'Cambria';
+    color: #000000;
+    font-weight: bold
+}
+#date_filter span{
+    padding: 30px;
+}
+#date_filter input{
+    margin-left: 10px;
+    outline: none;
+    box-shadow: 2px 1px 2px 1px #000000;
+    margin-top: -10px;
+}
