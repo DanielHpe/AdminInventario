@@ -12,17 +12,11 @@
 
 ?>
 <body>
-<<<<<<< HEAD
-    <div class="header">
-        <img style="width: 200px; height: 200px; margin-top: -70px; margin-bottom: -50px; margin-left: 150px; position: absolute;" src="view/img/logo_stefanini.png" alt="logo" />
-        <h2 style="margin-top:20px; margin-bottom:50px" class="text-center">Controle de Inventário</h2>
-=======
     <div class="container">
         <div class="header" style="font-family: Cambria">
             <img style="width: 200px; height: 200px; margin-bottom:-50px; margin-top:-50px;" src="view/img/logo_stefanini.png" alt="logo" />
             <!-- <h2  class="text-center">Controle de Inventário</h2> -->
         </div>
->>>>>>> 7d12157a22c89e888fd4575912ff460473724067
     </div>
     <div class="container">
         <div class="jumbotron">
