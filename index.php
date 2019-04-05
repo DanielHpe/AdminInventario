@@ -5,7 +5,8 @@
 
     $conexao = new Conexao();
 
-    $query = "SELECT * FROM userpcinfo a JOIN (SELECT cpf, MAX(data) data from userpcinfo a GROUP BY cpf) b
+    $query = "SELECT * FROM userpcinfo a 
+    JOIN (SELECT cpf, MAX(data) data from userpcinfo a GROUP BY cpf) b
     ON a.cpf = b.cpf and a.data = b.data";
 
     $result = $conexao->selectAll($query, 0);
@@ -15,7 +16,6 @@
     <div class="container">
         <div class="header" style="font-family: Cambria">
             <img style="width: 200px; height: 200px; margin-bottom:-50px; margin-top:-50px;" src="view/img/logo_stefanini.png" alt="logo" />
-            <!-- <h2  class="text-center">Controle de Inventário</h2> -->
         </div>
     </div>
     <div class="container">
