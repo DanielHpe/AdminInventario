@@ -63,7 +63,7 @@
                     <?php } ?>
                 </tbody>     
             </table>
-            <a href="" style="color: #fff" id="exportCSV" class="btn btn-success pull-right">Exportar como CSV</a>
+            <button style="color: #fff" id="exportCSV" class="btn btn-success pull-right">Exportar como CSV</button>
         </div> 
     </div>
     <div style="margin-bottom: 30px;" class="margin"></div>

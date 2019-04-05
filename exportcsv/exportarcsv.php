@@ -2,7 +2,7 @@
 
     class ExportData{
 
-        private $result;
+        /* private $result;
 
         public function __construct($result){
             $this->result = $result;
@@ -46,6 +46,6 @@
     }
 
     $exportData = new ExportData($result);
-    $exportData->exportData();
+    $exportData->exportData(); */
     
 ?>
