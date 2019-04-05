@@ -64,8 +64,7 @@
                 </tbody>     
             </table>
             <a href="exportcsv\exportarcsv.php?export=true" class="btn btn-success pull-right">Exportar como CSV</a>
-        </div>
-       
+        </div> 
     </div>
     <div style="margin-bottom: 30px;" class="margin"></div>
 <?php require_once('fragments\footer.php'); ?>
