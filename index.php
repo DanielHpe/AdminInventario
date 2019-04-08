@@ -38,10 +38,9 @@
                         <th scope="col">Usuário: </th>
                         <th scope="col">Sistema: </th>
                         <th scope="col">Modelo: </th>
-                        <th scope="col">CPU: </th>
+                        <th scope="col">CPU: </th>W
                         <th scope="col">Número de Série: </th>
                         <th scope="col">Sistema Operacional: </th>
-                        
                     </tr>
                 </thead>
                 <tbody>
