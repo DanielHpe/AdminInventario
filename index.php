@@ -22,11 +22,14 @@
         <div class="jumbotron">
             <table id="table-server" class="display nowrap" style="width:100%">
                 <div class="container">
-                    <p id="date_filter">
-                        <span id="date-label-from" class="date-label">From:<input class="date_range_filter date" type="date" id="dateFrom" />
-                        <span id="date-label-to" class="date-label">To:<input class="date_range_filter date" type="date" id="dateTo" />
-                    </p>
+                    <div id="date_filter">
+                        <button id="reportrange" class="btn btn-success btn-lg">
+                            <span></span> <b class="caret"></b>
+                        </button>
+                    </div>
                 </div>
+                <hr>
+                <br>
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">Enviado às: </th>
@@ -38,7 +41,7 @@
                         <th scope="col">Usuário: </th>
                         <th scope="col">Sistema: </th>
                         <th scope="col">Modelo: </th>
-                        <th scope="col">CPU: </th>W
+                        <th scope="col">CPU: </th>
                         <th scope="col">Número de Série: </th>
                         <th scope="col">Sistema Operacional: </th>
                     </tr>
@@ -62,7 +65,9 @@
                     <?php } ?>
                 </tbody>     
             </table>
-            <button style="color: #fff" id="exportCSV" class="btn btn-success pull-right">Exportar como CSV</button>
+            <button id="exportCSV" style="color: #fff; font-family: Cambria; font-size: 20px; 
+            display: block; margin-left: auto; margin-right: auto; width: 40%;" class="btn btn-success 
+            pull-right">Exportar como CSV</button>
         </div> 
     </div>
     <div style="margin-bottom: 30px;" class="margin"></div>

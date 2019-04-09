@@ -20,7 +20,7 @@ Date.prototype.timeNow = function () {
 
 $(document).ready( function () {
 
-    $('#table-server').DataTable({
+    var table = $('#table-server').DataTable({
         order: [[0, 'DESC']],
         responsive: true,  
     });
@@ -54,5 +54,63 @@ $(document).ready( function () {
             link.click();
         }
     })
+
+    $(function() {
+
+        var start = moment("2019-01-01");
+        var end = moment();
+    
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));    
+        }
+    
+        $('#reportrange').daterangepicker({
+          startDate: start,
+          endDate: end,
+          ranges: {
+            'Todos': [moment("2019-01-01"), moment()],
+            'Hoje': [moment(), moment()],
+            'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Últimos 7 dias': [moment().subtract(6, 'days'), moment()],
+            'Últimos 30 dias': [moment().subtract(29, 'days'), moment()],
+            'Esse ano': [moment().startOf('year'), moment()],
+            'Último mês': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          }
+        }, cb);
+    
+        cb(start, end);
+    
+    });
+
+    $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+        var start = picker.startDate;
+        var end = picker.endDate;     
+
+        $.fn.dataTable.ext.search.push(
+            function(settings, data, dataIndex) {
+                var min = start;
+                var max = end;
+                var startDate = new Date(data[0]);
+
+                if (min == null && max == null) {
+                    return true;
+                }
+                if (min == null && startDate <= max) {
+                    return true;
+                }
+                if (max == null && startDate >= min) {
+                    return true;
+                }
+                if (startDate <= max && startDate >= min) {
+                    return true;
+                }
+                return false;                    
+            }
+        );
+        table.draw();
+        $.fn.dataTable.ext.search.pop();
+    });
+
+    
 
 });

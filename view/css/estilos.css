@@ -44,7 +44,8 @@ table.dataTable tbody td.no-padding {
     text-align: center;
     font-family: 'Cambria';
     color: #000000;
-    font-weight: bold
+    font-weight: bold;
+    font-size: 20px;
 }
 #date_filter span{
     padding: 30px;
