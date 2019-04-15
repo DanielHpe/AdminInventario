@@ -1,7 +1,7 @@
 <?php 
 
-    require_once('fragments\header.php'); 
-    require_once('conexao\conexao.php');
+    require_once('fragments/header.php'); 
+    require_once('conexao/conexao.php');
 
     $conexao = new Conexao();
 
@@ -71,4 +71,4 @@
         </div> 
     </div>
     <div style="margin-bottom: 30px;" class="margin"></div>
-<?php require_once('fragments\footer.php'); ?>
+<?php require_once('fragments/footer.php'); ?>
