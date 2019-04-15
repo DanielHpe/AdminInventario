@@ -4,7 +4,7 @@ class Conexao{
 
     public $conn;
     public $hostname = '127.0.0.1';
-    public $database = 'systeminfotest';
+    public $database = 'systeminfo';
     public $charset = "utf8";
     public $user = "root";
     public $password = "";
